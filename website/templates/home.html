@@ -2,14 +2,15 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1 align="center">Notes</h1>
+
+<h1 style="color: #fff8dc;" align="center">Notes</h1>
 <ul class="list-group list-group-flush"
     id="notes">
     {% for note in user.notes %}
     <li class="list-group-item">{{ note.date }} - {{ note.data }}
         <button type="button"
                 class="close"
-                onClick="deleteNote({{note.id}})">
+                onClick="deleteNote({{ note.id }})">
             <span aria-hidden="true">&times;</span>
 
         </button>
@@ -18,12 +19,13 @@
 </ul>
 <form method="POST">
     <textarea name="note"
-              id="note"
-              class="form-control"></textarea>
-    <br />
+                id="note"
+                class="form-control"></textarea>
+    <br/>
     <div align="center">
         <button type="submit"
                 class="btn btn-primary">Add Note</button>
     </div>
 </form>
+
 {% endblock %}
