@@ -18,7 +18,17 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       crossorigin="anonymous"
     />
-    
+    <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=gambetta@2,2&display=swap" 
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/gambetta.css') }}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/stylesheets/gambetta2.css') }}"
+    />
+    <link rel="shortcut icon" href=""
+    />
+  
         <title>{% block title %}Homepage{% endblock %}</title>
     </head>
     <body>
@@ -80,7 +90,7 @@
         {% endwith %}
 
 
-        <div class="container">
+        <div>
             {% block content %}
             {% endblock %}
         </div>
