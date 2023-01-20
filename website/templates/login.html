@@ -3,43 +3,49 @@
 
 
 {% block content %}
-<div class="hero">
-    <div>
-        <!-- <img id="image2" src="../static/stylesheets/images/peter.png"> -->
-        <form id="login-form" method="POST">
-            <h3 class="title" align="center">Login</h3>
-            <div class="form-group">
-                
-                <label class="form-label" for="email">Email Address</label>
-                <input type="email"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    placeholder="Enter email to see what's up"
-                />
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="password">Password</label>
-                <input type="password"
-                    class="form-control"
-                    id="password"
-                    name="password"
-                    placeholder="Enter hush-hush word"
-                />
-            </div>
-            <br />
-            <div class="col-md-12 text-left">
-                <button 
-                type="submit" 
-                class="btn btn-outline-primary bt-lg" 
-                style="color: PaleGoldenRod; margin-left: 20px; margin-bottom: 10px;">Get in here!</button>
-            </div>
-            <a href="/register" style="color: PaleGoldenRod;" >
-                <p id="dont-have-account"style="text-align:center">Don't have an account and want to share your deatails? Click here to register
-                </a>
-            </div>
+<div class="form-wrapper">   
+    <form id="login-form" method="POST">
+        <h3 class="login-title" align="center">Login</h3>
+        <div class="form-group">        
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email to see what's up"
+            />
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <input type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter hush-hush word"
+            />
+        </div>
+        <br />
+        <div class="col-md-12 text-left">
+            <button 
+            type="submit" 
+            class="btn btn-outline-primary bt-lg" 
+            style="color: PaleGoldenRod; margin-left: 20px; margin-bottom: 20px;">Get in here!</button>
+        </div>
+        <a href="/register" style="color: PaleGoldenRod;" >
+            <p id="dont-have-account"style="text-align:center">Don't have an account and want to share your deatails?<br>here to register
+            </a>
+        </div>
         
+
     </form>
 </div>
-
+<div class="login-info-container">
+    <img class="peter-image" src="../static/stylesheets/images/peter.png">
+    <article class="info-panel">
+        <h1 class="large rise">Why would you login?!</h1>
+        <hr>
+        <P class="login-info">If you have created an account, you will then be able to login where you can leave notes,
+        that I will be able to access from the databse the notes are saved</P>
+    </article>
+</div>
 {% endblock %}
