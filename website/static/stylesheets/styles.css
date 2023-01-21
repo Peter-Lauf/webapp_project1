@@ -59,17 +59,13 @@ body {
 
 .form-wrapper {
     display: flex;
-    position: static;
+    position: relative;
     justify-content: space-evenly;
     flex-direction: row-reverse; 
     flex-wrap: wrap-reverse;
-    gap: 50px 20px;
-    position: relative;
+    gap: 5px 5px;  
     top: 150px;
     left: 45px;
-    /* width: 2700px;
-    /* max-width: 2700px;
-    width: calc(100% - 164px); */
 
 }
 :root {
@@ -78,69 +74,60 @@ body {
     --dark-shadow: #3e2904;
 }
 
-.login-title-wrapper {
-    position: static;
-    box-sizing: content-box;
+ .login-form .login-title-wrapper {
+    /* margin: 0; */
+    /* box-sizing: border-box; */
     display: grid;
     grid-template-areas: 'overlap';
     place-content: center;
     text-transform: uppercase;
-    min-height: 23%;
-    min-width: 100%;
-    resize: none;
-    /* max-height: 23%; */
+    height: 100px;
+    padding-top: 25px;
 }
 
-.login-title-wrapper > div {
+.login-form .login-title-wrapper  > div {
     background-clip: text;
     -webkit-background-clip: text;
     color: #363833;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: clamp( 35px, 3.5vw, 4rem);
+    font-size: clamp( 48px, 1vw, 240px);
     grid-area: overlap;
-    letter-spacing: 1px;
-    -webkit-text-stroke: 4px transparent;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 3.5px transparent;
+
 }
 
-.login-title-bg {
+div.login-title-bg {
     background-image: repeating-linear-gradient(105deg,
         var(--gold) 0% ,
-        var(--dark-shadow) 5%,
+        var(--dark-shadow) 5% ,
         var(--gold) 12%);
-    color: transparent;
+    color: #1e2127;
     filter: drop-shadow(5px 15px 15px black);
-    transform: scaleY(1.05);
+    transform: scaleY(1.04);
     transform-origin: top;
 }
 
-h3.login-title-fg {
+div.login-title-fg {
     background-image: repeating-linear-gradient(5deg,
         var(--gold) 0% ,
         var(--light-shadow) 23% ,
         var(--gold) 31%);
-    color: #1e2127;
-    transform: scale(1);
+    color: transparent;
+    transform: scale(1.01);
 }
-
-/* .login-title {
-    padding-top: 15px;
-    font-size: 30px;
-    color: #808080;
-} */
 
 .login-form {
     position: static;
     flex: 1 1 auto;
     flex-basis: 2%;
-    margin: 5px;
     margin-right: 35px;
     background-image: url('../stylesheets/images/form-bg.jpg');
     background-image: no-repeat;
     background-size: cover;
     background-position: fixed;
     background-repeat: no-repeat;
-    border-radius: 2%;
     -moz-box-shadow: 25px 25px 18px black;
     -webkit-box-shadow: 25px 25px 18px black;
     box-shadow: 25px 25px 18px black;
@@ -161,14 +148,14 @@ h3.login-title-fg {
     color: #BCBCBC;
     font-family: 'Gambetta', serif;
     letter-spacing: 1px;
-    outline: none;
+    outline:#000;
     text-align: left;
     padding-bottom: 10px;
 }
 
 .form-group {
     position: relative;
-    display: block;
+    /* display: block; */
     margin-left: 35px;
     margin-top: 20px;
 }
