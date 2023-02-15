@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block title %}Login{% endblock %}
 
 
@@ -11,13 +12,32 @@
         <h1 class="large rise">Why would you login?!</h1>
         <hr>
         <P class="login-info">If you have created an account, you will then be able to login where you can leave notes,
-        that I will be able to access from the database where those notes get saved to</P>
+        that I will be able to access from the database where those notes get saved.</P>
+        <p class="login-info-two">Also, you'll get to see some neat widgets I created. :)</p>
     </article>
     <form class="login-form" method="POST">
-        <div class="login-title-wrapper">
-            <div class="login-title-bg">Login</div>
-            <div class="login-title-fg">Login</div>
-        </div>
+        <ul class="login-title">
+            <li class="title-list">
+                <input class="login-letter-box" type="checkbox" />
+                <div class="title-letter">L</div>
+            </li>
+            <li class="title-list">
+                <input class="login-letter-box" type="checkbox" />
+                <div class="title-letter">O</div>
+            </li>
+            <li class="title-list">
+                <input class="login-letter-box" type="checkbox" />
+                <div class="title-letter">G</div>
+            </li>
+            <li class="title-list">
+                <input class="login-letter-box" type="checkbox" />
+                <div class="title-letter">I</div>
+            </li>
+            <li class="title-list">
+                <input class="login-letter-box" type="checkbox" />
+                <div class="title-letter">N</div>
+            </li>
+        </ul> 
         <div class="form-group">        
             <label class="form-label" for="email">Email Address</label>
             <input type="email"
@@ -37,19 +57,15 @@
             />
         </div>
         <br />
-        <div class="col-md-12 text-left">
+        <div class="col-md-12 text-center">
             <button 
             type="submit" 
-            class="btn btn-outline-primary bt-lg" 
-            style="color: PaleGoldenRod; margin-left: 20px; margin-bottom: 20px;">Now get in here!</button>
+            class="btn-login-form"><span>Now get in here!</span></button>
         </div>
         <a href="/register" style="color: PaleGoldenRod;" >
-            <p id="dont-have-account"style="text-align:center">Don't have an account and want to share your deatails?<br>here to register
+            <p id="dont-have-account"style="text-align:center">Don't have an account and want to share your details? Click here to register
             </a>
-        </div>
-        
-
-    </form> 
-    
+        </div>     
+    </form>  
 </div>
 {% endblock %}

@@ -1,8 +1,9 @@
-from flask import Blueprint, render_template, request, flash, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
 from .models import Note
 from . import db
 import json
+
 
 views = Blueprint('views', __name__)
 
@@ -40,5 +41,9 @@ def delete_note():
     return jsonify({})
 
 
+@views.route('/webapps', methods=['GET', 'POST'])
+def webapps():
+    if request.method == 'POST':
+        return redirect(url_for('webapps'))
 
-
+    return render_template('webapps.html', user=current_user)

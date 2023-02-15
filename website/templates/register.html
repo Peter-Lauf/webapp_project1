@@ -2,55 +2,60 @@
 {% block title %}Register{% endblock %}
 
 {% block content %}
-<form class = registration-form method="POST">
-    <h3 class="title" style="text-align:center">Register</h3>
-    <div class="form-group">
-        <label class="form-label" for="email">Email Address</label>
-        <input type="email"
-               class="form-control"
-               id="email"
-               name="email"
-               placeholder="Enter email so we can send you stuff you'll ignore"
-        />
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="firstName">First Name</label>
-        <input type="text"
-               class="form-control"
-               id="firstName"
-               name="firstName"
-               placeholder="Your name given by your parents"
-        />
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="lastName">Last name</label>
-        <input type="text"
-               class="form-control"
-               id="lastName"
-               name="lastName"
-               placeholder="Your name given by chance"
-        />
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="password1">Password</label>
-        <input type="password"
-               class="form-control"
-               id="password1"
-               name="password1"
-               placeholder="hush-hush word (must have 1 capital letter and 1 number ¯\_(ツ)_/¯ )"
-        />
-    </div>
-    <div class="form-group">
-        <label class="form-label" for="password2">Password (Confirm)</label>
-        <input type="password"
-               class="form-control"
-               id="password2"
-               name="password2"
-               placeholder="And once more for the Queen and country!"
-        />
-    </div>
-    <br />
-    <button type="submit" class="btn btn-outline-primary btn-lg btn-block">Simply when you're ready</button>
-</form>
+<div class="reg-form-wrapper">
+    <form class = registration-form method="POST">
+        <h3 class="reg-form-title"><span>Register</span></h3>
+        <div class="reg-form-group">
+            <label class="reg-form-label" for="email">Email Address</label>
+            <input type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email so I can send you stuff you'll ignore"
+            />
+        </div>
+        <div class="reg-form-group">
+            <label class="reg-form-label" for="firstName">First Name</label>
+            <input type="text"
+                class="form-control"
+                id="firstName"
+                name="firstName"
+                placeholder="Your name given by your parents"
+            />
+        </div>
+        <div class="reg-form-group">
+            <label class="reg-form-label" for="lastName">Last name</label>
+            <input type="text"
+                class="form-control"
+                id="lastName"
+                name="lastName"
+                placeholder="Your name given by chance"
+            />
+        </div>
+        <div class="reg-form-group">
+            <label class="reg-form-label" for="password1">Password</label>
+            <input type="password"
+                class="form-control"
+                id="password1"
+                name="password1"
+                placeholder="hush-hush word (must have 1 capital letter and 1 number ¯\_(ツ)_/¯ )"
+            />
+        </div>
+        <div class="reg-form-group">
+            <label class="reg-form-label" for="password2">Password (Confirm)</label>
+            <input type="password"
+                class="form-control"
+                id="password2"
+                name="password2"
+                placeholder="And once more for the Queen and country!"
+            />
+        </div>
+        <br />
+        <button 
+        type="submit" 
+        class="btn-reg-form" 
+        style="margin-left: 20px; margin-right: 20px;"><span class="button-text">Simply when you're ready</span></button>
+    </form>
+</div>
 
 {% endblock %}

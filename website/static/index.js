@@ -3,6 +3,51 @@ function deleteNote(noteId) {
         method: 'POST',
         body: JSON.stringify({noteId: noteId})
     }).then((_response) => {
-       window.location.href = "/";
+       window.location.href = "/notespage";
     });
 }
+
+// popup modal
+
+let popup = document.getElementById('popup');
+
+function openPopup() {
+    popup.classList.add('open-popup');
+}
+function closePopup() {
+    popup.classList.remove('open-popup');
+}
+
+$(".homepage-wrapper").click(function(){
+    $(this).addClass("skip-animation");
+});
+
+// Clock
+
+const hours = document.querySelector('.hours');
+const minutes = document.querySelector('.minutes');
+const seconds = document.querySelector('.seconds');
+
+clock = () => {
+    let today = new Date();
+    let h = (today.getHours() % 12) + today.getMinutes() / 59; // 22 % 12 = 10pm
+    let m = today.getMinutes(); // 0 - 59
+    let s = today.getSeconds(); // 0 - 59
+
+    h *= 30; // 12 * 30 = 360deg
+    m *= 6;
+    s *= 6; // 60 * 6 = 360deg
+
+    rotation(hours, h);
+    rotation(minutes, m);
+    rotation(seconds, s);
+
+    // call every second
+    setTimeout(clock, 500);
+};
+
+rotation = (target, val) => {
+    target.style.transform = `rotate(${val}deg)`;
+};
+
+window.onload = clock();

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Web Apps{% endblock %}
+
+{% block content %}
+<div class="webapps-wrapper">
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>/</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>
+    </div>
+    <div class="pacman-container">
+        <div id="container" class="mainScreen">
+            <canvas class="board"></canvas>
+            <canvas class="game"></canvas>
+            <canvas class="screen"></canvas>
+
+            <div class="main display">
+                <ul>
+                    <li><a href="#" data-action="play"><u>S</u>tart Game</a></li>
+                    <li><a href="#" data-action="highScores"><u>H</u>igh Scores</a></li>
+                    <li><a href="#" data-action="help"><u>C</u>ontrols</a></li>
+                </ul>
+                <div class="audio" data-action="sound">
+                    <div class="waves">
+                        <div></div><div></div>
+                        <div></div><div></div>
+                    </div>
+                    <div class="triangle"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="input display">
+                <h2 id="game-over">Game Over</h2>
+                <p id="player-name">Your name:</p>
+                <input class="pacman-input" type="text" />
+                <a class="pacman-link" href="#" data-action="save">Ok</a>
+                <a class="restart pacman-link" href="#" data-action="mainScreen"><u>N</u>ew Game</a>
+            </div>
+
+            <div class="high display">
+                <h2 id="high-scores">High Scores</h2>
+                <div class="scores"></div>
+                <div class="none">No scores available</div>
+                <a class="restore pacman-link" href="#" data-action="restore"><u>R</u>estore</a>
+                <a class="back pacman-link" href="#" data-action="mainScreen"><u>B</u>ack</a>
+            </div>
+
+            <div class="controls display">
+                <h1 id="game-controls">Controls</h1>
+                <ol>
+                    <li><span>Use the arrows or WASD keys to move the blob.</span></li>
+                    <li><span>Space or P will pause the game.</span></li>
+                    <li><span>M will trigger the sound on or off.</span></li>
+                    <li><span>Use the links or keys (underline letters) to navigate throught the screens.</span></li>
+                </ol>
+                <a class="pacman-link" href="#" data-action="mainScreen"><u>B</u>ack</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

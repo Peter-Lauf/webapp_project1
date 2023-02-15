@@ -39,3 +39,5 @@ def create_database(app):
         with app.app_context():
             db.create_all()
         print('Database created successfully')
+
+create_app()
